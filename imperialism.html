@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>U.S. Imperialism</title>
+        <link rel="stylesheet" href="imperialismStyle.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="introBanner">
+            <!--Decrease opacity of the image-->
+            <img id="introImg" src="https://www.radiohc.cu/articles/3833-aguila-usa.jpg">
+            <div id="overlayText">
+                <br><br><br><br><br><h1>U.S. Imperialism</h1><br>
+                By: Alan and Derrick
+            </div>
+        </div>
+        <div id="title1">
+            <strong>Imperialism: Definition & Reason</strong>
+        </div>
+        <section id="aboutImperialism">
+            <div id="textContainer">
+                <br><br><br><h1>What Is Imperialism?</h1>
+                <br id="reason"><br><h1>Reasons for Imperialism</h1>
+            </div>
+        </section>
+        <div id="title2">
+            <strong>Historical Timeline</strong>
+        </div>
+        <section id="timeline">
+            <h2>Year: <span id="year"></span></h2>
+            <div class="slide" id="slide1"></div>
+            <div class="slide" id="slide2"></div>
+            <div class="slide" id="slide3"></div>
+            <div class="slide" id="slide4"></div>
+            <!--Each step is 1 year from 1900 to 1999-->
+            <input type="range" min="0" max="99" value="0" step="1" id="slider">
+        </section>
+        <!--Navigation on the top of the page, placed after banner to show the border line at bottom for separation-->
+        <div id="topNavigaion">
+            <a class="navigationLinks" href="#">U.S. Imperialism</a>
+            <!--Use href=# and id name to link to specific objects-->
+            <a class="navigationLinks" href="#title1">Imperialism: Definition & Reason</a>
+            <a class="navigationLinks" href="#title2">Historical Timeline</a>
+            <a class="navigationLinks" href="#footer">Source Information</a>
+            <!--Unlock and lock for icon-->
+            <span id="navPosition"><i id="lockIcon" class="fa fa-unlock"></i></span>
+        </div>
+        <footer id="footer">
+            <br><br><h1>Source Information</h1>
+            Crash Course: <br>
+            <br>
+        </footer>
+        <!--<h1 id="hi" style="position: absolute; top: 300%; background-color: beige;">hiiiiiiii</h1>-->
+        <script src="imperialismMain.js"></script>
+    </body>
+</html>

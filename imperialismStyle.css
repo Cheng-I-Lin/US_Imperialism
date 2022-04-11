@@ -1,0 +1,242 @@
+#slider{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    width: 90%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 15px;
+    background-color: black;
+    outline: none;
+    transition: opacity 1s;
+}
+#slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px; 
+    height: 30px; 
+    background: rgb(49, 135, 233); 
+    cursor: pointer; 
+    border: blue 5px solid;
+}
+.slide{
+    position: absolute;
+    top: 49.25%;
+    width: 30px; 
+    height: 30px; 
+    background-color: black;
+}
+#slide1{
+    left: 5.15%;
+}
+#slide2{
+    left: 30%;
+}
+#slide3{
+    left: 40%;
+}
+#slide4{
+    left: 50%;
+}
+
+html{
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%
+}
+body {
+    margin: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbars */
+}
+div{
+   transform-origin: 0 0;
+}
+#topNavigaion {
+    background-color: black;
+    position: fixed;
+    /*vw=1% of device width*/
+    width: 100vw;
+    height: 8vh;
+    left: 0vw;
+    top: 0vh;
+    text-align: center;
+    /*Relative to the font-size of the element (2em means 2 times the size of the current font)*/
+    font-size: 1.5em;
+    border-bottom: white 1px solid;
+    overflow: hidden;
+}
+#navPosition{
+    float: right;
+    color: white;
+    padding: 14px 35px;
+}
+#navPosition:hover{
+    color: gold;
+}
+.navigationLinks:link {
+    /*says where the text should be aligned*/
+    float: left;
+    /*controls the box size of the element*/
+    padding: 16px 25px;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+.navigationLinks:visited {
+    float: left;
+    padding: 16px 25px;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+.navigationLinks:hover {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+}
+/* Add a color to the active/current link */
+.navigationLinks:active {
+    background-color: rgb(49, 135, 233);
+    color: white;
+}
+.gameLink:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+.gameLink:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+.gameLink:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:link {
+    color: rgb(0, 0, 150);
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(0, 0, 150);
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+#introBanner{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0vw;
+    top: 8vh;
+    background-color: black;
+}
+#introImg{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+#overlayText{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0vw;
+    top: 0vh;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    text-shadow: 2px 2px 10px rgb(49, 135, 233);
+}
+#title1{
+    position: absolute;
+    padding-top: 3.25%;
+    width: 100vw;
+    height: 25vh;
+    left: 0vw;
+    top: 108vh;
+    text-align: center;
+    font-size: 4em;
+    background-color: rgb(49, 135, 233);
+}
+#aboutImperialism{
+    position: absolute;
+    width: 100vw;
+    height: 125vh;
+    left: 0vw;
+    top: 133vh;
+    text-align: center;
+    font-size: 1.5em;
+    color: black;
+    background-color: rgb(223, 219, 206);
+}
+#title2{
+    position: absolute;
+    padding-top: 3.25%;
+    width: 100vw;
+    height: 25vh;
+    left: 0vw;
+    top: 258vh;
+    text-align: center;
+    font-size: 4em;
+    background-color: rgb(49, 135, 233);
+}
+#timeline{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0vw;
+    top: 283vh;
+    text-align: center;
+    font-size: 1.5em;
+    background-color: rgb(223, 219, 206);
+}
+#textContainer{
+    position: absolute;
+    width: 80vw;
+    height: 100vh;
+    left: 10vw;
+    top: 0vh;
+}
+#intro{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    transition: left 1s;
+}
+#footer{
+    position: absolute;
+    width: 100vw;
+    height: 40vh;
+    left: 0vw;
+    top: 383vh;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: white;
+}
+.footerIcon{
+    font-size: 2.25em;
+    /*Specifies the spacing between each letter*/
+    letter-spacing: 2px;
+}
+.footerIcon:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+.footerIcon:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+.footerIcon:hover {
+    color: gold;
+    background-color: transparent;
+}
