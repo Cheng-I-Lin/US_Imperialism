@@ -198,7 +198,7 @@ a:hover {
     font-size: 1.5em;
     background-color: rgb(223, 219, 206);
 }
-#textContainer{
+.textContainer{
     position: absolute;
     width: 80vw;
     height: 100vh;

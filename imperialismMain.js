@@ -14,6 +14,8 @@ for(l of navLink){
     l.style.padding=(16*scale)+"px "+(25*scale)+"px";
 }
 document.getElementById("navPosition").style.padding=(14*scale)+"px "+(35*scale)+"px";
+document.getElementById("title1").style.paddingTop=scale*3.25+"%";
+document.getElementById("title2").style.paddingTop=scale*3.25+"%";
 document.getElementById("overlayText").style.fontSize=scale*2+"em";
 document.getElementById("footer").style.fontSize=scaleX+"%";
 
@@ -27,12 +29,39 @@ document.getElementById("navPosition").addEventListener("click",function(){
         nav.style.position="absolute";
     }
 });
+var img=document.getElementById("img");
+var info=document.getElementById("info");
 setInterval(function(){
     document.getElementById("year").innerHTML=1900+parseInt(progressBar.value);
+    //Don't show info and img when not the correct year, opacity transition fade
     switch(parseInt(progressBar.value)){
         case 0:
+            img.src="";
+            info.innerHTML="hi";
+            break;
+        case 10:
+            img.src="";
+            info.innerHTML="hi";
+            break;
+        case 20:
+            img.src="";
+            info.innerHTML="hi";
+            break;
+        case 30:
+            img.src="";
+            info.innerHTML="hi";
+            break;
+        case 40:
+            img.src="";
+            info.innerHTML="hi";
+            break;
+        case 50:
+            img.src="";
+            info.innerHTML="hi";
             break;
         default:
+            img.src="";
+            info.innerHTML="";
             break;
     }
 });
