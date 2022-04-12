@@ -64,4 +64,14 @@ setInterval(function(){
             info.innerHTML="";
             break;
     }
+    let imgContainer=document.getElementsByClassName("imgContainer");
+    let pic=document.getElementsByClassName("explainImg");
+    for(p of pic){
+        while(p.offsetWidth>imgContainer[0].offsetWidth){
+            p.style.width=p.offsetWidth/1.1+"px";
+        }
+        while(p.offsetHeight>imgContainer[0].offsetHeight){
+            p.style.height=p.offsetHeight/1.1+"px";
+        }
+    }
 });
