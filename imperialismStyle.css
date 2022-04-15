@@ -244,7 +244,6 @@ a:hover {
 #img{
     position: absolute;
     left: 10%;
-    bottom: 10%;
     width: 80%;
     height: 30%;
     background-color: aqua;
@@ -253,6 +252,7 @@ a:hover {
 #info{
     position: absolute;
     left: 10%;
+    bottom: 10%;
     width: 80%;
     height: 30%;
     background-color: aqua;
@@ -261,7 +261,6 @@ a:hover {
 .imgContainer{
     width: 100%;
     height: 50%;
-    background-color: aqua;
 }
 .explainImg{
     border: 2px solid black;
