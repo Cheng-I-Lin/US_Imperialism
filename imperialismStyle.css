@@ -1,4 +1,6 @@
 #slider{
+    --sliderColor: "rgb(49, 135, 233)";
+    --sliderBorder: "rgb(49, 135, 233)";
     position: absolute;
     left: 5%;
     top: 50%;
@@ -15,13 +17,13 @@
     appearance: none;
     width: 30px; 
     height: 30px; 
-    background: rgb(49, 135, 233); 
+    background: var(--sliderColor); 
     cursor: pointer; 
-    border: blue 5px solid;
+    border: var(--sliderBorder) 5px solid;
 }
 .slide{
     position: absolute;
-    top: 49.25%;
+    top: 49.5%;
     width: 30px; 
     height: 30px; 
     background-color: black;
@@ -37,6 +39,18 @@
 }
 #slide4{
     left: 50%;
+}
+#slide5{
+    left: 60%;
+}
+#slide6{
+    left: 70%;
+}
+#slide7{
+    left: 80%;
+}
+#slide8{
+    left: 90%;
 }
 
 html{
@@ -191,7 +205,7 @@ a:hover {
 #timeline{
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     left: 0vw;
     top: 358vh;
     text-align: center;
@@ -216,7 +230,7 @@ a:hover {
     width: 100vw;
     height: 40vh;
     left: 0vw;
-    top: 458vh;
+    top: 508vh;
     background-color: rgb(0, 0, 0);
     text-align: center;
     color: white;
@@ -251,6 +265,7 @@ a:hover {
 }
 #info{
     position: absolute;
+    text-align: left;
     left: 10%;
     bottom: 10%;
     width: 80%;
@@ -264,4 +279,55 @@ a:hover {
 }
 .explainImg{
     border: 2px solid black;
+}
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: gold;
+    background-color: transparent;
+    text-decoration: underline;
+}
+#copyright{
+    position: absolute;
+    left: 2.5%;
+    bottom: 2.5%;
+}
+#tm{
+    position: absolute;
+    right: 2.5%;
+    bottom: 2.5%;
+    font-size: 2em;
+}
+#infoPage{
+    position: fixed;
+    width: 57vw;
+    height: 57vh;
+    left: 21.5vw;
+    top: 21.5vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+    border: 4px solid rgb(49, 135, 233);
+    display: none;
+    opacity: 0;
+    color: white;
+    font-size: 1.25em;
+    padding: 10px 10px;
+    transition: opacity 1s;
+}
+.infoButton{
+    border-radius: 10px;
+    border: 0;
+    background-color: white;
+    transition: all 0.75s;
+}
+#closeButton:hover{
+    background-color: gold;
 }

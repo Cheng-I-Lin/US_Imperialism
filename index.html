@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>U.S. Imperialism</title>
+        <title>20th Century U.S. Imperialism</title>
         <link rel="icon" type="image/png" href="https://www.astaichung.com/uploads/1/3/6/3/13638525/editor/mr-ethan-dombkowski2.jpg?1598862181"/>
         <link rel="stylesheet" href="imperialismStyle.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -13,7 +13,7 @@
             <!--Decrease opacity of the image-->
             <img id="introImg" src="https://www.radiohc.cu/articles/3833-aguila-usa.jpg">
             <div id="overlayText">
-                <br><br><br><br><br><h1>U.S. Imperialism</h1><br>
+                <br><br><br><br><br><h1>20th Century U.S. Imperialism</h1><br>
                 By: Alan and Derrick
             </div>
         </div>
@@ -24,14 +24,25 @@
             <div class="textContainer">
                 <br><h1>What Is Imperialism?</h1><br>
                 “<strong>American imperialism</strong> consists of policies aimed at extending the political, 
-                economic and cultural influence of the <span style="color: blue;">United States</span> over areas beyond its boundaries.” - Wikipedia
+                economic and cultural influence of the <span id="unitedStates">United States</span> over areas beyond its boundaries.” - Wikipedia
                 <br><br><br>
                 <div class="imgContainer">
                     <img class="explainImg" src="https://commentator.hawkweb.org/wp-content/uploads/2018/01/us_imperialism.jpg">
                     <img class="explainImg" src="https://upload.wikimedia.org/wikipedia/commons/0/08/10kMiles.JPG">
                 </div>
                 <br><br><h1>Reasons for Imperialism</h1>
-
+                The United States started imperialism due to a number of reasons...<br><br>
+                <ul style="text-align: left;">
+                    <li><strong>S:</strong></li>
+                    <li><strong></strong></li>
+                    <li><strong></strong></li>
+                    <li><strong></strong></li>
+                    <li><strong></strong></li>
+                </ul>
+                <div class="imgContainer">
+                    <img class="explainImg" src="">
+                    <img class="explainImg" src="">
+                </div>
             </div>
         </section>
         <div id="title2">
@@ -43,10 +54,15 @@
             <div class="slide" id="slide2"></div>
             <div class="slide" id="slide3"></div>
             <div class="slide" id="slide4"></div>
+            <div class="slide" id="slide5"></div>
+            <div class="slide" id="slide6"></div>
+            <div class="slide" id="slide7"></div>
+            <div class="slide" id="slide8"></div>
             <!--Each step is 1 year from 1900 to 1999-->
             <input type="range" min="0" max="99" value="0" step="1" id="slider">
             <img id="img">
             <div id="info">
+                <strong><span id="infoTitle"></span></strong>
             </div>
         </section>
         <!--Navigation on the top of the page, placed after banner to show the border line at bottom for separation-->
@@ -61,10 +77,45 @@
         </div>
         <footer id="footer">
             <br><br><h1>Source Information</h1>
-            Crash Course: <br>
-            https://en.wikipedia.org/wiki/American_imperialism
-            <br>
+            <a href="https://www.youtube.com/watch?v=QfsfoFqsFk4&ab_channel=CrashCourse">Crash Course</a><br>
+            <a href="https://en.wikipedia.org/wiki/American_imperialism">Wikipedia on Imperialism</a><br><br><br>
+            <a class="footerIcon" href="#"><i class="fa fa-home"></i></a>
+            <a class="footerIcon" href="https://github.com/Cheng-I-Lin"><i class="fa fa-github"></i></a>
+            <a class="footerIcon" href="https://www.astaichung.com/"><i class="fa fa-graduation-cap"></i></a>
+            <!--Leads to trivia game-->
+            <a class="footerIcon" href=""><i class="fa fa-gamepad"></i></a>
+            <a class="footerIcon" onclick="openInfo();"><i class="fa fa-info-circle"></i></a>
+            <div id="copyright">
+                <i class="fa fa-copyright"></i> 2022 American School in Taichung
+            </div>
+            <div id="tm">
+                <i class="fa fa-trademark"></i>
+            </div>
         </footer>
+        <div id="infoPage">
+            <!--Include settings and link copy paste here along with description of website-->
+            <strong style="text-decoration: underline;">Website Title</strong>: 20th Century U.S. Imperialism<br><br>
+            <strong style="text-decoration: underline;">Created by</strong>: Alan and Derrick<br><br>
+            <strong style="text-decoration: underline;">About</strong>: This website is designed to help people understand the imperialism that the United States
+            had pursued during the 20th century. It includes various details on the definition of and reasons for imperialism, in
+            addition with a timeline from 1900 to 1999 that depicts the historical imperialism events that had happened during the
+            time period. Furthermore, complementing the timeline is an interactive trivia game that helps users better understand 
+            how the United States imperialized other countries. By interacting with the timeline and the game, we hope that people 
+            would be more educated on these historical events, learning about not just concepts of imperialism, but also the 
+            whole history behind it.<br><br>
+            <strong style="text-decoration: underline;">Navigation</strong>: By clicking on the navigation bar located at the top of the screen, you can easily 
+            locate the main sections of the website without scrolling down. You can also click on the lock icon at the right
+            of the navigation bar to lock or unlock the bar's position from the top of the screen. Lastly, the footer also
+            contains links to the sources and other information.<br><br>
+            <a onclick="copyLink();"><i class="fa fa-link"></i> Copy Website Link</a><span style="opacity: 0;">ss</span> 
+            <a href="https://cheng-i-lin.github.io/US-History-Map/"><i class="fa fa-map"></i> Visit U.S. History Map Game</a>
+            <span style="opacity: 0;">s</span> 
+            <button class="infoButton" onclick="lightTheme();" style="background-color: gold;"><strong><i class="fa fa-sun-o"></i> Light Theme</strong></button>
+            <span style="opacity: 0;">s</span> 
+            <button class="infoButton" onclick="darkTheme();"><strong><i class="fa fa-moon-o"></i> Dark Theme</strong></button>
+            <span style="opacity: 0;">s</span> 
+            <button class="infoButton" id="closeButton" onclick="openInfo();"><strong><i class="fa fa-close"></i> Close</strong></button>
+        </div>
         <!--<h1 id="hi" style="position: absolute; top: 300%; background-color: beige;">hiiiiiiii</h1>-->
         <script src="imperialismMain.js"></script>
     </body>
