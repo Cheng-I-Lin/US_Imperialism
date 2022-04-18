@@ -24,7 +24,7 @@
             <div class="textContainer">
                 <br><h1>What Is Imperialism?</h1><br>
                 “<strong>American imperialism</strong> consists of policies aimed at extending the political, 
-                economic and cultural influence of the <span id="unitedStates">United States</span> over areas beyond its boundaries.” - Wikipedia
+                economic and cultural influence of the <span id="unitedStates" style="color: blue;">United States</span> over areas beyond its boundaries.” - Wikipedia
                 <br><br><br>
                 <div class="imgContainer">
                     <img class="explainImg" src="https://commentator.hawkweb.org/wp-content/uploads/2018/01/us_imperialism.jpg">
@@ -49,7 +49,7 @@
             <strong>Historical Timeline</strong>
         </div>
         <section id="timeline">
-            <h2>Year: <span id="year"></span></h2>
+            <h2><span id="year"></span></h2>
             <div class="slide" id="slide1"></div>
             <div class="slide" id="slide2"></div>
             <div class="slide" id="slide3"></div>
@@ -59,10 +59,26 @@
             <div class="slide" id="slide7"></div>
             <div class="slide" id="slide8"></div>
             <!--Each step is 1 year from 1900 to 1999-->
-            <input type="range" min="0" max="99" value="0" step="1" id="slider">
+            <input type="range" min="0" max="100" value="0" step="1" id="slider">
             <img id="img">
             <div id="info">
                 <strong><span id="infoTitle"></span></strong>
+            </div>
+            <div id="answerBlock"></div>
+            <div id="answerText"></div>
+            <div id="trivia">
+                <div class="choice" id="choice1" onclick="checkAns(this.id);">
+                    <div id="choice1Text">s</div>
+                </div>
+                <div class="choice" id="choice2" onclick="checkAns(this.id);">
+                    <div id="choice2Text"></div>
+                </div>
+                <div class="choice" id="choice3" onclick="checkAns(this.id);">
+                    <div id="choice3Text"></div>
+                </div>
+                <div class="choice" id="choice4" onclick="checkAns(this.id);">
+                    <div id="choice4Text"></div>
+                </div>
             </div>
         </section>
         <!--Navigation on the top of the page, placed after banner to show the border line at bottom for separation-->
@@ -82,24 +98,35 @@
             <a class="footerIcon" href="#"><i class="fa fa-home"></i></a>
             <a class="footerIcon" href="https://github.com/Cheng-I-Lin"><i class="fa fa-github"></i></a>
             <a class="footerIcon" href="https://www.astaichung.com/"><i class="fa fa-graduation-cap"></i></a>
-            <!--Leads to trivia game-->
-            <a class="footerIcon" href=""><i class="fa fa-gamepad"></i></a>
+            <!--Leads to trivia game, which can be on the very last spot of the timeline-->
+            <a class="footerIcon" href="#timeline" onclick="loadGame();"><i class="fa fa-gamepad"></i></a>
             <a class="footerIcon" onclick="openInfo();"><i class="fa fa-info-circle"></i></a>
             <div id="copyright">
                 <i class="fa fa-copyright"></i> 2022 American School in Taichung
+                <span style="opacity: 0;">ss</span>
+                <i class="fa fa-desktop"> On Desktop Only</i>
             </div>
             <div id="tm">
-                <i class="fa fa-trademark"></i>
+                 <i class="fa fa-trademark"></i>
             </div>
         </footer>
         <div id="infoPage">
             <!--Include settings and link copy paste here along with description of website-->
-            <strong style="text-decoration: underline;">Website Title</strong>: 20th Century U.S. Imperialism<br><br>
-            <strong style="text-decoration: underline;">Created by</strong>: Alan and Derrick<br><br>
+            <img id="mrD" src="https://www.astaichung.com/uploads/1/3/6/3/13638525/editor/mr-ethan-dombkowski2.jpg?1598862181">
+            <strong style="text-decoration: underline;">Website Title</strong>: 20th Century U.S. Imperialism
+            <span style="opacity: 0;">please give me an A</span> 
+            <strong style="text-decoration: underline;">Teacher</strong>: Mr. Dombkowski
+            <br><br>
+            <strong style="text-decoration: underline;">Created by</strong>: Alan and Derrick
+            <span style="opacity: 0;">I am alanhi</span> 
+            <strong style="text-decoration: underline;">School</strong>: AST
+            <span style="opacity: 0;">I am alanh</span> 
+            <strong style="text-decoration: underline;">Class</strong>: U.S. History
+            <br><br>
             <strong style="text-decoration: underline;">About</strong>: This website is designed to help people understand the imperialism that the United States
             had pursued during the 20th century. It includes various details on the definition of and reasons for imperialism, in
             addition with a timeline from 1900 to 1999 that depicts the historical imperialism events that had happened during the
-            time period. Furthermore, complementing the timeline is an interactive trivia game that helps users better understand 
+            time period. Furthermore, at the end of the timeline is an interactive trivia game that helps users better understand 
             how the United States imperialized other countries. By interacting with the timeline and the game, we hope that people 
             would be more educated on these historical events, learning about not just concepts of imperialism, but also the 
             whole history behind it.<br><br>
