@@ -1,6 +1,7 @@
 const nav=document.getElementById("topNavigaion");
 var lock=document.getElementById("lockIcon");
 const progressBar=document.getElementById("slider");
+var tooltip=document.getElementById("tooltip");
 
 var scaleX=(window.innerHeight/722)*100;
 var scale=(window.outerHeight/824);
@@ -145,6 +146,12 @@ function lightTheme(){
     }
     trivia.style.color="black";
     answerText.style.color="black";
+    tooltip.style.color="white";
+    tooltip.style.backgroundColor="black";
+    tooltip.style.border=4*scale+"px"+" solid rgb(49, 135, 233)";
+    for(let i=0;i<document.getElementsByClassName("explainImg").length;i++){
+        document.getElementsByClassName("explainImg")[i].style.border=2*scale+"px"+" solid black";
+    }
 }
 function darkTheme(){
     light=false;
@@ -171,6 +178,12 @@ function darkTheme(){
     }
     trivia.style.color="gold";
     answerText.style.color="rgb(223, 219, 206)";
+    tooltip.style.color="black";
+    tooltip.style.backgroundColor="rgb(223, 219, 206)";
+    tooltip.style.border=4*scale+"px"+" solid gold";
+    for(let i=0;i<document.getElementsByClassName("explainImg").length;i++){
+        document.getElementsByClassName("explainImg")[i].style.border=2*scale+"px"+" solid rgb(49, 135, 233)";
+    }
 }
 
 function copyLink() {
@@ -235,10 +248,58 @@ function checkAns(id){
     }
 }
 
+var closeTooltip=true;
+var closeTooltip2=true;
+var closeTooltip3=true;
+document.getElementsByClassName("explainImg")[0].addEventListener("mouseover",function(){
+    closeTooltip=false;
+    closeTooltip2=false;
+    closeTooltip3=false;
+    tooltip.style.display="block";
+    tooltip.style.left="2.5vw";
+    tooltip.style.top="185vh";
+    tooltip.style.width="10vw";
+    tooltip.innerHTML="These images depict how the United States is overtaking many parts of the world through imperialism";
+});
+document.getElementsByClassName("explainImg")[1].addEventListener("mouseover",function(){
+    closeTooltip=false;
+    closeTooltip2=false;
+    closeTooltip3=false;
+    tooltip.style.display="block";
+    tooltip.style.left="85vw";
+    tooltip.style.top="185vh";
+    tooltip.style.width="10vw";
+    tooltip.innerHTML="These images depict how the United States is overtaking many parts of the world through imperialism";
+});
+document.getElementsByClassName("explainImg")[0].addEventListener("mouseleave",function(){
+    closeTooltip=true;
+});
+document.getElementsByClassName("explainImg")[1].addEventListener("mouseleave",function(){
+    closeTooltip2=true;
+});
+document.getElementsByClassName("explainImg")[2].addEventListener("mouseleave",function(){
+    closeTooltip3=true;
+});
+document.getElementsByClassName("explainImg")[2].addEventListener("mouseover",function(){
+    closeTooltip=false;
+    closeTooltip2=false;
+    closeTooltip3=false;
+    tooltip.style.display="block";
+    tooltip.style.left="2.5vw";
+    tooltip.style.top="283.5vh";
+    tooltip.style.width="25vw";
+    tooltip.innerHTML="This image depicts Uncle Sam lecturing four children labelled “Philippines,” “Hawaii,” “Puerto Rico,” and “Cuba” in front of children holding books labeled with various U.S. states. In the background, an American Indian holds a book upside down, a Chinese boy stands at the door, and a black boy cleans a window. The blackboard reads, “The consent of the governed is a good thing in theory, but very rare in fact… the U.S. must govern its new territories with or without their consent until they can govern themselves.” - Lumen Boundless US History";
+});
+
 var img=document.getElementById("img");
 var info=document.getElementById("info");
 var infoTitle=document.getElementById("infoTitle");
 setInterval(function(){
+    tooltip.style.padding=(10*scale)+"px "+(10*scale)+"px";
+    tooltip.style.borderRadius=10*scale+"px";
+    if(closeTooltip||closeTooltip2||closeTooltip3){
+        tooltip.style.display="none";
+    }
     if(progressBar.value!=100){
         document.getElementById("year").innerHTML="Year: "+(1900+parseInt(progressBar.value));
         trivia.style.display="none";
@@ -255,7 +316,7 @@ setInterval(function(){
             answerText.innerHTML="What is imperialism?";
             break;
         case 1:
-            answerText.innerHTML="";
+            answerText.innerHTML="Which of the following is a reason that the United States imperialized other nations?";
             break;
         case 2:
             answerText.innerHTML="";
