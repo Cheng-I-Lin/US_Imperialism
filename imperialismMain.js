@@ -2,6 +2,8 @@ const nav=document.getElementById("topNavigaion");
 var lock=document.getElementById("lockIcon");
 const progressBar=document.getElementById("slider");
 var tooltip=document.getElementById("tooltip");
+var leftSlide=document.getElementById("leftSlide");
+var rightSlide=document.getElementById("rightSlide");
 
 var scaleX=(window.innerHeight/722)*100;
 var scale=(window.outerHeight/824);
@@ -25,6 +27,10 @@ document.getElementById("title1").style.paddingTop=scale*3.25+"%";
 document.getElementById("title2").style.paddingTop=scale*3.25+"%";
 document.getElementById("overlayText").style.fontSize=scale*2+"em";
 document.getElementById("footer").style.fontSize=scaleX+"%";
+document.getElementById("buttonIcon1").style.fontSize=scale*0.75+"em";
+document.getElementById("buttonIcon2").style.fontSize=scale*0.75+"em";
+leftSlide.style.fontSize=2.75*scale+"em";
+rightSlide.style.fontSize=2.75*scale+"em";
 answerText.style.fontSize=3*scale+"em";
 for(let i=0;i<document.getElementsByClassName("choice").length;i++){
     document.getElementsByClassName("choice")[i].style.border=4*scale+"px"+" solid black";
@@ -93,6 +99,40 @@ document.getElementsByClassName("choice")[3].addEventListener("mouseleave",funct
     }
 });
 
+var slide=0;
+leftSlide.addEventListener("click",function(){
+    if(slide!=0){
+        slide--;
+    }
+});
+rightSlide.addEventListener("click",function(){
+    if(slide!=information[currentSlide].length-1){
+        slide++;
+    }
+});
+
+leftSlide.addEventListener("mouseover",function(){
+    leftSlide.style.backgroundColor="aliceblue";
+});
+leftSlide.addEventListener("mouseleave",function(){
+    if(light){
+        leftSlide.style.backgroundColor="rgb(49, 135, 233)";
+    } else{
+        leftSlide.style.backgroundColor="gold";
+    }
+});
+
+rightSlide.addEventListener("mouseover",function(){
+    rightSlide.style.backgroundColor="aliceblue";
+});
+rightSlide.addEventListener("mouseleave",function(){
+    if(light){
+        rightSlide.style.backgroundColor="rgb(49, 135, 233)";
+    } else{
+        rightSlide.style.backgroundColor="gold";
+    }
+});
+
 document.getElementById("navPosition").addEventListener("click",function(){
     if(nav.style.position=="absolute"){
         //Changes the icon based on position
@@ -152,6 +192,8 @@ function lightTheme(){
     for(let i=0;i<document.getElementsByClassName("explainImg").length;i++){
         document.getElementsByClassName("explainImg")[i].style.border=2*scale+"px"+" solid black";
     }
+    leftSlide.style.backgroundColor="rgb(49, 135, 233)";
+    rightSlide.style.backgroundColor="rgb(49, 135, 233)";
 }
 function darkTheme(){
     light=false;
@@ -184,6 +226,8 @@ function darkTheme(){
     for(let i=0;i<document.getElementsByClassName("explainImg").length;i++){
         document.getElementsByClassName("explainImg")[i].style.border=2*scale+"px"+" solid rgb(49, 135, 233)";
     }
+    leftSlide.style.backgroundColor="gold";
+    rightSlide.style.backgroundColor="gold";
 }
 
 function copyLink() {
@@ -291,8 +335,27 @@ document.getElementsByClassName("explainImg")[2].addEventListener("mouseover",fu
     tooltip.innerHTML="This image depicts Uncle Sam lecturing four children labelled “Philippines,” “Hawaii,” “Puerto Rico,” and “Cuba” in front of children holding books labeled with various U.S. states. In the background, an American Indian holds a book upside down, a Chinese boy stands at the door, and a black boy cleans a window. The blackboard reads, “The consent of the governed is a good thing in theory, but very rare in fact… the U.S. must govern its new territories with or without their consent until they can govern themselves.” - Lumen Boundless US History";
 });
 
+var information=[
+    ["aaa","aa"],
+    ["s"],
+    [""],
+    [""],
+    [""],
+    [""],
+    [""]
+];
+var allImage=[
+    [""],
+    [""],
+    [""],
+    [""],
+    [""],
+    [""],
+    [""]
+];
+var currentSlide=0;
 var img=document.getElementById("img");
-var info=document.getElementById("info");
+var info=document.getElementById("infoText");
 var infoTitle=document.getElementById("infoTitle");
 setInterval(function(){
     tooltip.style.padding=(10*scale)+"px "+(10*scale)+"px";
@@ -333,49 +396,56 @@ setInterval(function(){
     //Don't show info and img when not the correct year, opacity transition fade
     switch(parseInt(progressBar.value)){
         case 0:
-            img.src="";
-            infoTitle.innerHTML="";
-            info.innerHTML="";
+            currentSlide=0;
+            img.src=allImage[currentSlide][slide];
+            infoTitle.innerHTML="s";
+            info.innerHTML=information[0][slide];
             break;
         case 10:
-            img.src="";
+            currentSlide=1;
+            img.src=allImage[currentSlide][slide];
             infoTitle.innerHTML="";
-            info.innerHTML="";
+            info.innerHTML=information[1][slide];
             break;
         case 20:
-            img.src="";
+            currentSlide=2;
+            img.src=allImage[currentSlide][slide];
             infoTitle.innerHTML="";
-            info.innerHTML="";
+            info.innerHTML=information[2][slide];
             break;
         case 30:
-            img.src="";
+            currentSlide=3;
+            img.src=allImage[currentSlide][slide];
             infoTitle.innerHTML="";
-            info.innerHTML="";
+            info.innerHTML=information[3][slide];
             break;
         case 40:
-            img.src="";
+            currentSlide=4;
+            img.src=allImage[currentSlide][slide];
             infoTitle.innerHTML="";
-            info.innerHTML="";
+            info.innerHTML=information[4][slide];
             break;
         case 50:
-            img.src="";
+            currentSlide=5;
+            img.src=allImage[currentSlide][slide];
             infoTitle.innerHTML="";
-            info.innerHTML="";
+            info.innerHTML=information[5][slide];
             break;
         default:
-            img.src="";
+            currentSlide=6;
+            img.src=allImage[currentSlide][slide];
             infoTitle.innerHTML="";
-            info.innerHTML="";
+            info.innerHTML=information[6][slide];
             break;
     }
     let imgContainer=document.getElementsByClassName("imgContainer");
     let pic=document.getElementsByClassName("explainImg");
     for(p of pic){
-        while(p.offsetWidth>imgContainer[0].offsetWidth){
-            p.style.width=p.offsetWidth/1.1+"px";
+        while(p.offsetWidth*scale>imgContainer[0].offsetWidth){
+            p.style.width=p.offsetWidth*scale/1.1+"px";
         }
-        while(p.offsetHeight>imgContainer[0].offsetHeight){
-            p.style.height=p.offsetHeight/1.1+"px";
+        while(p.offsetHeight*scale>imgContainer[0].offsetHeight){
+            p.style.height=p.offsetHeight*scale/1.1+"px";
         }
     }
 });
