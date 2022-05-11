@@ -32,7 +32,7 @@
     left: 5.15vw;
 }
 #slide2{
-    left: 30vw;
+    left: 7.8vw;
 }
 #slide3{
     left: 40vw;
@@ -260,11 +260,13 @@ a:hover {
 }
 
 #img{
+    border: 2px black solid;
+}
+#i{
     position: absolute;
     left: 10%;
     width: 80%;
     height: 30%;
-    transition: all 1s;
 }
 #info{
     position: absolute;

@@ -101,13 +101,13 @@ document.getElementsByClassName("choice")[3].addEventListener("mouseleave",funct
 
 var slide=0;
 leftSlide.addEventListener("click",function(){
-    if(slide!=0){
-        slide--;
+    if(progressBar.value!=0){
+        progressBar.value--;
     }
 });
 rightSlide.addEventListener("click",function(){
-    if(slide!=information[currentSlide].length-1){
-        slide++;
+    if(progressBar.value!=100){
+        progressBar.value++;
     }
 });
 
@@ -192,6 +192,7 @@ function lightTheme(){
     for(let i=0;i<document.getElementsByClassName("explainImg").length;i++){
         document.getElementsByClassName("explainImg")[i].style.border=2*scale+"px"+" solid black";
     }
+    document.getElementById("img").style.border=2*scale+"px"+" solid black";
     leftSlide.style.backgroundColor="rgb(49, 135, 233)";
     rightSlide.style.backgroundColor="rgb(49, 135, 233)";
 }
@@ -226,6 +227,7 @@ function darkTheme(){
     for(let i=0;i<document.getElementsByClassName("explainImg").length;i++){
         document.getElementsByClassName("explainImg")[i].style.border=2*scale+"px"+" solid rgb(49, 135, 233)";
     }
+    document.getElementById("img").style.border=2*scale+"px"+" solid rgb(49, 135, 233)";
     leftSlide.style.backgroundColor="gold";
     rightSlide.style.backgroundColor="gold";
 }
@@ -336,8 +338,8 @@ document.getElementsByClassName("explainImg")[2].addEventListener("mouseover",fu
 });
 
 var information=[
-    ["aaa","aa"],
-    ["s"],
+    ["aaa"],
+    ["In 1850 the US and Great Britain were discussing the negotiation of the Clayton-Bulwer Treaty fighting for a proposed idea of a canal through Central America, the Republic of Nicaragua. This ended soon and did not make further progress than the planning stage. The French tried to do the same, to create a canal through Panama but after countless diseases such as Malaria and Yellow Fever, the French attempt went bankrupt after losing over 20,000 lives. After the US saw Panama fighting for their independence, the US took the chance to bribe them and create treaties to make the canal and help Panama win their independence."],
     [""],
     [""],
     [""],
@@ -346,7 +348,7 @@ var information=[
 ];
 var allImage=[
     [""],
-    [""],
+    ["https://smithsonianassociates.org/ticketing/images/web-core-2020/panama-canal.jpg"],
     [""],
     [""],
     [""],
@@ -401,41 +403,41 @@ setInterval(function(){
             infoTitle.innerHTML="s";
             info.innerHTML=information[0][slide];
             break;
-        case 10:
+        case 3:
             currentSlide=1;
             img.src=allImage[currentSlide][slide];
-            infoTitle.innerHTML="";
+            infoTitle.innerHTML="Panama(1903~1914)";
             info.innerHTML=information[1][slide];
             break;
         case 20:
             currentSlide=2;
             img.src=allImage[currentSlide][slide];
-            infoTitle.innerHTML="";
+            infoTitle.innerHTML="Operation Condor: Henry Kissinger()";
             info.innerHTML=information[2][slide];
             break;
         case 30:
             currentSlide=3;
             img.src=allImage[currentSlide][slide];
-            infoTitle.innerHTML="";
+            infoTitle.innerHTML="Bay of Pigs()";
             info.innerHTML=information[3][slide];
             break;
         case 40:
             currentSlide=4;
             img.src=allImage[currentSlide][slide];
-            infoTitle.innerHTML="";
+            infoTitle.innerHTML="Hawaii";
             info.innerHTML=information[4][slide];
             break;
         case 50:
             currentSlide=5;
             img.src=allImage[currentSlide][slide];
-            infoTitle.innerHTML="";
+            infoTitle.innerHTML="Japan";
             info.innerHTML=information[5][slide];
             break;
         default:
             currentSlide=6;
             img.src=allImage[currentSlide][slide];
-            infoTitle.innerHTML="";
-            info.innerHTML=information[6][slide];
+            infoTitle.innerHTML="No Info";
+            info.innerHTML="Move to the following years indicated by the large black squares";
             break;
     }
     let imgContainer=document.getElementsByClassName("imgContainer");
@@ -447,5 +449,11 @@ setInterval(function(){
         while(p.offsetHeight*scale>imgContainer[0].offsetHeight){
             p.style.height=p.offsetHeight*scale/1.1+"px";
         }
+    }
+    while(img.offsetWidth*scale>imgContainer[2].offsetWidth){
+        img.style.width=img.offsetWidth*scale/1.1+"px";
+    }
+    while(img.offsetHeight*scale>imgContainer[2].offsetHeight){
+        img.style.height=img.offsetHeight*scale/1.1+"px";
     }
 });
