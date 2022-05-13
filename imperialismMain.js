@@ -106,7 +106,7 @@ leftSlide.addEventListener("click",function(){
     }
 });
 rightSlide.addEventListener("click",function(){
-    if(progressBar.value!=100){
+    if(progressBar.value!=102){
         progressBar.value++;
     }
 });
@@ -216,7 +216,7 @@ function darkTheme(){
     document.getElementById("slider").style.setProperty('--sliderColor', "yellow");
     document.getElementById("slider").style.setProperty('--sliderBorder', "orange");
     for(let i=0;i<document.getElementsByClassName("choice").length;i++){
-        document.getElementsByClassName("choice")[i].style.backgroundColor="black"
+        document.getElementsByClassName("choice")[i].style.backgroundColor="black";
         document.getElementsByClassName("choice")[i].style.border=4*scale+"px"+" solid gold";
     }
     trivia.style.color="gold";
@@ -240,7 +240,7 @@ function copyLink() {
 var trivia=document.getElementById("trivia");
 trivia.style.fontSize=2*scale+"em";
 function loadGame(){
-    progressBar.value=100;
+    progressBar.value=102;
 }
 
 document.addEventListener("keyup",function(key){
@@ -264,7 +264,7 @@ document.addEventListener("keyup",function(key){
     }
 });
 
-var answer=[1,2,3,4,1];
+var answer=[1,3,3,4,2];
 var currentQuestion=0;
 function checkAns(id){
     //Gets answer correctly
@@ -338,20 +338,28 @@ document.getElementsByClassName("explainImg")[2].addEventListener("mouseover",fu
 });
 
 var information=[
-    ["aaa"],
-    ["In 1850 the US and Great Britain were discussing the negotiation of the Clayton-Bulwer Treaty fighting for a proposed idea of a canal through Central America, the Republic of Nicaragua. This ended soon and did not make further progress than the planning stage. The French tried to do the same, to create a canal through Panama but after countless diseases such as Malaria and Yellow Fever, the French attempt went bankrupt after losing over 20,000 lives. After the US saw Panama fighting for their independence, the US took the chance to bribe them and create treaties to make the canal and help Panama win their independence."],
-    [""],
-    [""],
-    [""],
-    [""],
-    [""]
+    ["<br>"],
+    ["<br>In 1850 the US and Great Britain were discussing the negotiation of the Clayton-Bulwer Treaty fighting for a proposed idea of a canal through Central America, the Republic of Nicaragua. This ended soon and did not make further progress than the planning stage. The French tried to do the same, to create a canal through Panama but after countless diseases such as Malaria and Yellow Fever, the French attempt went bankrupt after losing over 20,000 lives. After the US saw Panama fighting for their independence, the US took the chance to bribe them and create treaties to make the canal and help Panama win their independence."],
+    ["<br>What is operation condor?<br>It is a secret operation that started around the 1970s due to dangerous people traveling in  and out of countries in South America mostly from Chile, Argentina, Bolivia, Brazil, Paraguay, Peru, and Uruguay. Operation Condor gives these country access and right to capture any of the escapees. Henry Kissinger was state secretary of the United States and helped with US involvement in the operation to help train people to torture and somtimes murder terrorism and subversion. But a lot of people were killed or disappeared were just innocent people. When Kissinger was asked in 2001 by judge Roger Le Loire in his stay in Paris, he soon fled back to the United States."],
+    ["<br>Bay of Pigs was a secretly financed and directed operation by the U.S government on April 17th to 20th during the Cuban Revolution. Cuban ex-prime minister Castro was trying to overthrow other countries. Cuban soon had enough power and became allies with America and Dominican Republic. US 34th President, Eisenhower accused Castro of being a communist and planned an invasion. The invasion by the CIA tried to overthrow Castro by using Cubans from Florida as military and untraceable aircrafts so it didn’t seem like America invaded. Cuban intelligence however knew the invasion was happening and quickly shut down the invasion."],
+    ["<br>Missionaries actually stepped foot onto Hawaii soil in around the 1820s but it was not until the 1890s that the United States wanted to overthrow the Queen of Hawaii. Without the President’s approval, the marines took action and stormed the island and raised the American Flag on their soil while forcing the Queen to renounce her stance. In 1893 Grover Cleveland became President and withdrew the annexation  even though a lot of people still wanted Hawaii to be annexed. But after President Cleveland left the office, Hawaii was annexed again in 1898 to hold bases against Spanish Philippines."],
+    ["<br>In 1600s Japan banned foreigners from entering the country. 1852 Matthew Perry(Not the one from FRIENDS) was sent to Japan because President Millard Fillmore wanted to negotiate an arrangement with Japan. He arrived in 1853 and was ordered that he can use gun force if needed. At first the Japanese did not let him in but after being intimidated by gunshots they answered him but rejected. Later that year he returned back with 10 ships and the Japanese had no choice but to agree to trade."],
+    ["<br>"],
+    ["<br>After WWII Korea gained freedom from Japan helped by Russian Federation in the North and America helped in the South. 1950-53 America had a massacre."],
+    ["<br>The U.S. saw that an area in Vietnam is known to be the richest area so they fought for it. The communist party in South Vietnam organised a guerilla, the NFL, which forced the CIA to go into “anti-terror” mode and kill off people before they resupply the NFL. The US was drawn deeper and deeper in the war and started opertion “rolling thunder” to bomb northern Vietnam."],
+    ["<br>"],
+    ["<br>"]
 ];
 var allImage=[
     [""],
     ["https://smithsonianassociates.org/ticketing/images/web-core-2020/panama-canal.jpg"],
-    [""],
-    [""],
-    [""],
+    ["https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Jorge_Rafael_Videla_Oath.PNG/1200px-Jorge_Rafael_Videla_Oath.PNG"],
+    ["https://media.npr.org/assets/img/2011/04/15/3379132_wide-852d3133317531134183bd305e2ff83331d70966-s1100-c50.jpg"],
+    ["https://assets.ozy.com/ozy-prod/2017/05/gettyimages-90768321.jpg?crop=0px,134px,1600px,900px&resize=600x337"],
+    ["https://timpanogos.files.wordpress.com/2014/07/image149.png"],
+    ["https://previews.123rf.com/images/lkeskinen/lkeskinen1610/lkeskinen161000246/63375277-sin-sello-de-goma-de-informaci%C3%B3n-en-blanco-imprimir-impresionar-sobreimpresi%C3%B3n-.jpg"],
+    ["https://images.squarespace-cdn.com/content/v1/5e0185311e0373308494e5b6/1578378226384-73P3T4TCHPQTPACOEXD8/koreaus.jpg?format=1500w"],
+    ["https://www.leftvoice.org/wp-content/uploads/2020/09/https___www.history.com_.image_MTY0Nzc1ODE2NTk5NzA5NjU5_vietnam-war-gettyimages-615208290-promo.jpg"],
     [""],
     [""]
 ];
@@ -365,14 +373,16 @@ setInterval(function(){
     if(closeTooltip||closeTooltip2||closeTooltip3){
         tooltip.style.display="none";
     }
-    if(progressBar.value!=100){
-        document.getElementById("year").innerHTML="Year: "+(1900+parseInt(progressBar.value));
+    if(progressBar.value!=102){
+        document.getElementById("year").innerHTML="Year: "+(1898+parseInt(progressBar.value));
         trivia.style.display="none";
         answerText.style.display="none";
+        img.style.opacity="1";
     } else{
         document.getElementById("year").innerHTML="Trivia Game Question #"+(currentQuestion+1);
         trivia.style.display="block";
         answerText.style.display="block";
+        img.style.opacity="0";
     }
     //Place answer text in the middle
     answerText.style.top=document.getElementById("answerBlock").offsetTop+(document.getElementById("answerBlock").offsetHeight-answerText.offsetHeight)/2+"px";
@@ -384,54 +394,72 @@ setInterval(function(){
             answerText.innerHTML="Which of the following is a reason that the United States imperialized other nations?";
             break;
         case 2:
-            answerText.innerHTML="";
+            answerText.innerHTML="What is the Panama Canal?";
             break;
         case 3:
-            answerText.innerHTML="";
+            answerText.innerHTML="Who is Henry Kissinger?";
             break;
         case 4:
-            answerText.innerHTML="";
+            answerText.innerHTML="Who had the best presentation of all time?";
             break;
         default:
             break;
     }
     //Don't show info and img when not the correct year, opacity transition fade
     switch(parseInt(progressBar.value)){
-        case 0:
-            currentSlide=0;
-            img.src=allImage[currentSlide][slide];
-            infoTitle.innerHTML="s";
-            info.innerHTML=information[0][slide];
-            break;
-        case 3:
+        case 5:
             currentSlide=1;
             img.src=allImage[currentSlide][slide];
-            infoTitle.innerHTML="Panama(1903~1914)";
+            infoTitle.innerHTML="Panama (1903~1914)";
             info.innerHTML=information[1][slide];
             break;
-        case 20:
+        case 72:
             currentSlide=2;
             img.src=allImage[currentSlide][slide];
-            infoTitle.innerHTML="Operation Condor: Henry Kissinger()";
+            infoTitle.innerHTML="Operation Condor: Henry Kissinger (Around the 1970s)";
             info.innerHTML=information[2][slide];
             break;
-        case 30:
+        case 63:
             currentSlide=3;
             img.src=allImage[currentSlide][slide];
-            infoTitle.innerHTML="Bay of Pigs()";
+            infoTitle.innerHTML="Bay of Pigs (1961)";
             info.innerHTML=information[3][slide];
             break;
-        case 40:
+        case 0:
             currentSlide=4;
             img.src=allImage[currentSlide][slide];
-            infoTitle.innerHTML="Hawaii";
+            infoTitle.innerHTML="Hawaii (About 1898)";
             info.innerHTML=information[4][slide];
             break;
-        case 50:
+        case 47:
             currentSlide=5;
             img.src=allImage[currentSlide][slide];
-            infoTitle.innerHTML="Japan";
+            infoTitle.innerHTML="Japan (About 1945)";
             info.innerHTML=information[5][slide];
+            break;
+        case 52:
+            currentSlide=7;
+            img.src=allImage[currentSlide][slide];
+            infoTitle.innerHTML="Korea (1950)";
+            info.innerHTML=information[7][slide];
+            break;
+        case 77:
+            currentSlide=8;
+            img.src=allImage[currentSlide][slide];
+            infoTitle.innerHTML="Vietnam (1975)";
+            info.innerHTML=information[8][slide];
+            break;
+        case 87:
+            currentSlide=9;
+            img.src=allImage[currentSlide][slide];
+            infoTitle.innerHTML="Iran - Contra Affair (1985-1987)";
+            info.innerHTML=information[9][slide];
+            break;
+        case 82:
+            currentSlide=10;
+            img.src=allImage[currentSlide][slide];
+            infoTitle.innerHTML="Iran-Iraq War (1980s)";
+            info.innerHTML=information[10][slide];
             break;
         default:
             currentSlide=6;
@@ -455,5 +483,40 @@ setInterval(function(){
     }
     while(img.offsetHeight*scale>imgContainer[2].offsetHeight){
         img.style.height=img.offsetHeight*scale/1.1+"px";
+    }
+    switch(currentQuestion){
+        case 0:
+            document.getElementById("choice1Text").innerHTML="Policies aimed at extending the political, economic and cultural influence of a nation over areas beyond its boundaries";
+            document.getElementById("choice2Text").innerHTML="Colonization of multiple countries by a single country and enslaving the people that are colonized";
+            document.getElementById("choice3Text").innerHTML="Gaining control of other territories through the means military strength, only practiced by the United States";
+            document.getElementById("choice4Text").innerHTML="A new form of colonization that began around the 20th century involving only highly developed countries";
+            break;
+        case 1:
+            document.getElementById("choice1Text").innerHTML="They felt like it";
+            document.getElementById("choice2Text").innerHTML="Governmental dictation";
+            document.getElementById("choice3Text").innerHTML="Cultural superiority";
+            document.getElementById("choice4Text").innerHTML="Invasion of enemy territories";
+            break;
+        case 2:
+            document.getElementById("choice1Text").innerHTML="A canal providing the quickest direct access to Panama from the United States";
+            document.getElementById("choice2Text").innerHTML="A canal made in Panama for the traders and merchants of Panama to further expand their trade routes";
+            document.getElementById("choice3Text").innerHTML="A canal that goes through Central America which Panama took control from the U.S";
+            document.getElementById("choice4Text").innerHTML="The canal where the Ever Given cargo ship got stuck at recently";
+            break;
+        case 3:
+            document.getElementById("choice1Text").innerHTML="Ask Mr.D, he probably knows the answer to this question";
+            document.getElementById("choice2Text").innerHTML="The general and head of a famous terrorist group";
+            document.getElementById("choice3Text").innerHTML="A dangerous criminal involving in the Operation Condor that killed thousands of people";
+            document.getElementById("choice4Text").innerHTML="He was a state secretary of the United States and helped with U.S. involvement in the operation to help train people";
+            break;
+        default:
+            document.getElementById("choice1Text").innerHTML="Rick and Josh's group";
+            document.getElementById("choice2Text").innerHTML="Definitely Alan and Derrick's group";
+            document.getElementById("choice3Text").innerHTML="Mr.D(Although he didn't present, I needed one more option)";
+            document.getElementById("choice4Text").innerHTML="Michelle, Rochelle, and Yun Ji's group";
+            break;
+    }
+    for(let i=0;i<document.getElementsByClassName("choice").length;i++){
+        document.getElementsByClassName("choice")[i].style.paddingTop=15*scale+"px";
     }
 });
