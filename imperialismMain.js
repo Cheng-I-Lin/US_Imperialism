@@ -9,7 +9,7 @@ var scaleX=(window.innerHeight/722)*100;
 var scale=(window.outerHeight/824);
 const text=document.getElementsByClassName("textContainer");
 for(t of text){
-    t.style.fontSize=scale+"em";
+    t.style.fontSize=scaleX+"%";
 }
 nav.style.fontSize=scale*1.5+"em";
 const navLink=document.getElementsByClassName("navigationLinks");
