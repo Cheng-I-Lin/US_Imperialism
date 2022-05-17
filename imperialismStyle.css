@@ -227,6 +227,7 @@ a:hover {
     height: 100vh;
     left: 10vw;
     top: 0vh;
+    font-size: 1em;
 }
 #intro{
     position: absolute;
