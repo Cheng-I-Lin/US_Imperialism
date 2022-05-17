@@ -522,4 +522,8 @@ setInterval(function(){
     for(let i=0;i<document.getElementsByClassName("choice").length;i++){
         document.getElementsByClassName("choice")[i].style.paddingTop=15*scale+"px";
     }
+    document.getElementsById("choice1Text").style.fontSize=scale+"em";
+    document.getElementsById("choice2Text").style.fontSize=scale+"em";
+    document.getElementsById("choice3Text").style.fontSize=scale+"em";
+    document.getElementsById("choice4Text").style.fontSize=scale+"em";
 });
