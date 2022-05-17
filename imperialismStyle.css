@@ -198,7 +198,7 @@ a:hover {
     font-size: 1.5em;
     color: black;
     background-color: rgb(223, 219, 206);
-    overflow: scroll;
+    overflow-y: scroll;
 }
 #title2{
     position: absolute;
@@ -284,7 +284,7 @@ a:hover {
     width: 65%;
     height: 30%;
     transition: all 1s;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 .imgContainer{
     width: 100%;
@@ -334,6 +334,7 @@ a:hover {
     font-size: 1.25em;
     padding: 10px 10px;
     transition: opacity 1s;
+    overflow-y: scroll;
 }
 .infoButton{
     border-radius: 10px;
