@@ -376,23 +376,26 @@ a:hover {
     transition: all 1s;
     padding-top: 15px;
     font-size: 0.75em;
-    overflow: scroll;
 }
 #choice1{
     left: 0%;
     top: 0%;
+    overflow: scroll;
 }
 #choice2{
     left: 50%;
     top: 0%;
+    overflow: scroll;
 }
 #choice3{
     left: 0%;
     top: 50%;
+    overflow: scroll;
 }
 #choice4{
     left: 50%;
     top: 50%;
+    overflow: scroll;
 }
 #mrD{
     position: absolute;

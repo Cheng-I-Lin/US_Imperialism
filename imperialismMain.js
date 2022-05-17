@@ -19,10 +19,6 @@ for(l of navLink){
 var answerText=document.getElementById("answerText");
 document.getElementById("navPosition").style.padding=(14*scale)+"px "+(35*scale)+"px";
 document.getElementById("tm").style.fontSize=2*scale+"em";
-document.getElementById("infoPage").style.fontSize=1.25*scale+"em";
-document.getElementById("infoPage").style.border=4*scale+"px solid rgb(49, 135, 233)";
-document.getElementById("infoPage").style.borderRadius=15*scale+"px";
-document.getElementById("infoPage").style.padding=(10*scale)+"px "+(10*scale)+"px";
 document.getElementById("info").style.fontSize=scale+"em";
 document.getElementById("title1").style.paddingTop=scale*3.25+"%";
 document.getElementById("title2").style.paddingTop=scale*3.25+"%";
@@ -526,4 +522,8 @@ setInterval(function(){
     document.getElementsById("choice2Text").style.fontSize=scale+"em";
     document.getElementsById("choice3Text").style.fontSize=scale+"em";
     document.getElementsById("choice4Text").style.fontSize=scale+"em";
+    document.getElementById("infoPage").style.fontSize=1.25*scale+"em";
+    document.getElementById("infoPage").style.border=4*scale+"px solid rgb(49, 135, 233)";
+    document.getElementById("infoPage").style.borderRadius=15*scale+"px";
+    document.getElementById("infoPage").style.padding=(10*scale)+"px "+(10*scale)+"px";
 });
