@@ -198,6 +198,7 @@ a:hover {
     font-size: 1.5em;
     color: black;
     background-color: rgb(223, 219, 206);
+    overflow: scroll;
 }
 #title2{
     position: absolute;
@@ -283,6 +284,7 @@ a:hover {
     width: 65%;
     height: 30%;
     transition: all 1s;
+    overflow: scroll;
 }
 .imgContainer{
     width: 100%;

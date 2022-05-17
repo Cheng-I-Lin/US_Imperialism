@@ -34,7 +34,7 @@ leftSlide.style.fontSize=2.75*scale+"em";
 rightSlide.style.fontSize=2.75*scale+"em";
 answerText.style.fontSize=3*scale+"em";
 for(let i=0;i<document.getElementsByClassName("choice").length;i++){
-    document.getElementsByClassName("choice")[i].style.fontSize=scaleX+"%";
+    document.getElementsByClassName("choice")[i].style.fontSize=scale+"em";
     document.getElementsByClassName("choice")[i].style.border=4*scale+"px"+" solid black";
 }
 //Initialize slider thumb color
