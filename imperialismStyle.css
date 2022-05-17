@@ -376,6 +376,7 @@ a:hover {
     transition: all 1s;
     padding-top: 15px;
     font-size: 0.75em;
+    overflow: scroll;
 }
 #choice1{
     left: 0%;
