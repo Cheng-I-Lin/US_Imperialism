@@ -23,6 +23,7 @@ document.getElementById("infoPage").style.fontSize=1.25*scale+"em";
 document.getElementById("infoPage").style.border=4*scale+"px solid rgb(49, 135, 233)";
 document.getElementById("infoPage").style.borderRadius=15*scale+"px";
 document.getElementById("infoPage").style.padding=(10*scale)+"px "+(10*scale)+"px";
+document.getElementById("info").style.fontSize=scale+"em";
 document.getElementById("title1").style.paddingTop=scale*3.25+"%";
 document.getElementById("title2").style.paddingTop=scale*3.25+"%";
 document.getElementById("overlayText").style.fontSize=scale*2+"em";
@@ -33,6 +34,7 @@ leftSlide.style.fontSize=2.75*scale+"em";
 rightSlide.style.fontSize=2.75*scale+"em";
 answerText.style.fontSize=3*scale+"em";
 for(let i=0;i<document.getElementsByClassName("choice").length;i++){
+    document.getElementsByClassName("choice")[i].style.fontSize=scale+"em";
     document.getElementsByClassName("choice")[i].style.border=4*scale+"px"+" solid black";
 }
 //Initialize slider thumb color
@@ -471,12 +473,13 @@ setInterval(function(){
     let imgContainer=document.getElementsByClassName("imgContainer");
     let pic=document.getElementsByClassName("explainImg");
     for(p of pic){
-        while(p.offsetWidth*scale>imgContainer[0].offsetWidth){
-            p.style.width=p.offsetWidth*scale/1.1+"px";
+        while(p.offsetWidth>imgContainer[0].offsetWidth){
+            p.style.width=(p.offsetWidth/1.1)*scale+"px";
         }
-        while(p.offsetHeight*scale>imgContainer[0].offsetHeight){
-            p.style.height=p.offsetHeight*scale/1.1+"px";
+        while(p.offsetHeight>imgContainer[0].offsetHeight){
+            p.style.height=(p.offsetHeight/1.1)*scale+"px";
         }
+        //p.style.width=p.offsetHeight*scale+"px";
     }
     while(img.offsetWidth*scale>imgContainer[2].offsetWidth){
         img.style.width=img.offsetWidth*scale/1.1+"px";
