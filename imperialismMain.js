@@ -345,8 +345,8 @@ var information=[
     ["<br>"],
     ["<br>After WWII Korea gained freedom from Japan helped by Russian Federation in the North and America helped in the South. 1950-53 America had a massacre."],
     ["<br>The U.S. saw that an area in Vietnam is known to be the richest area so they fought for it. The communist party in South Vietnam organised a guerilla, the NFL, which forced the CIA to go into “anti-terror” mode and kill off people before they resupply the NFL. The US was drawn deeper and deeper in the war and started opertion “rolling thunder” to bomb northern Vietnam."],
-    ["<br>"],
-    ["<br>"]
+    ["<br>Often referred to as the Iran–Contra scandal, the Iran–Contra affair was a political scandle that occured in the United States. The U.S. president at that time, Ronald Reagan, tried to assist anti-communist insurgencies around the world since they were in the Cold War with Russia. Although Reagan tried funding the Contras, who was battling with the communist Sandinista, with money from cocaine trades, an amendment is passed to prohibit this. However, at the same time, Iran captured American hostages and used them for ransom. Wanting to still help the Contras, the U.S. took the opportunity of using the money from the terrorist negotiations to still support the Contras."],
+    ["<br>The Iran-Iraq War, also known as the First Gulf War, lasted for 8 years beginning by an invasion of Iran by the neighbouring Iraq, which started due to Iraq's desire to become the dominant state in the Persian Gulf and the religious tensions between Iraq and Iran. Throughout the war, the United States suppported Iraq with economic aid and military provisions. Although they did not officailly stated the reason for such support in the war, many have speculated that the U.S. secretly encouraged Iraqi leader Saddam Hussein to invade Iran."]
 ];
 var allImage=[
     [""],
@@ -358,8 +358,8 @@ var allImage=[
     ["https://previews.123rf.com/images/lkeskinen/lkeskinen1610/lkeskinen161000246/63375277-sin-sello-de-goma-de-informaci%C3%B3n-en-blanco-imprimir-impresionar-sobreimpresi%C3%B3n-.jpg"],
     ["https://images.squarespace-cdn.com/content/v1/5e0185311e0373308494e5b6/1578378226384-73P3T4TCHPQTPACOEXD8/koreaus.jpg?format=1500w"],
     ["https://www.leftvoice.org/wp-content/uploads/2020/09/https___www.history.com_.image_MTY0Nzc1ODE2NTk5NzA5NjU5_vietnam-war-gettyimages-615208290-promo.jpg"],
-    [""],
-    [""]
+    ["https://nsarchive.gwu.edu/sites/default/files/thumbnails/image/01-reagan-with-tower-report-1151229_600.jpg"],
+    ["https://i0.wp.com/militaryhistorynow.com/wp-content/uploads/2019/03/152_mm_howitzer_D-20_belong_to_Military_of_Iran.jpg?fit=700%2C549&ssl=1"]
 ];
 var currentSlide=0;
 var img=document.getElementById("img");
